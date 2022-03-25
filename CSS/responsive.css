@@ -1,0 +1,186 @@
+@media screen and (max-width: 992px) {
+  /* Used this cutoff as felt that around 800-100px width the designs needed change */
+  .header-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 2rem 0;
+  }
+
+  .img-wrapper {
+    width: 10%;
+  }
+
+  .google-ads .google {
+    width: 8%;
+  }
+
+  .google {
+    top: 10%;
+  }
+
+  .benefit-cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .for-people-bg {
+    padding: 4rem 0 0;
+    margin-bottom: 4rem;
+  }
+
+  .for-people-img {
+    width: 105%;
+    margin-left: -5%;
+    align-self: end;
+  }
+
+  .reasons {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4rem;
+  }
+  .line::after {
+    display: none;
+  }
+
+  .trusted-by {
+    margin-bottom: 3rem;
+  }
+  .pricing {
+    margin-top: 3rem;
+  }
+  .pricing-details-wrapper {
+    column-gap: 1rem;
+  }
+
+  .footer-cols-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
+  }
+  .footer-col.col-1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* [aria-controls='topbarDropdown'], */
+  [aria-controls='navbarDropdown'] {
+    display: block;
+  }
+
+  [aria-expanded='false'] ~ ul {
+    display: none;
+  }
+  [aria-expanded='true'] ~ ul {
+    display: block;
+  }
+
+  [aria-expanded='true'] ~ ul {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 6rem;
+    width: 100%;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.9);
+    padding-right: 6%;
+  }
+
+  [aria-expanded='true'] ~ ul li a {
+    margin-right: 2rem;
+    color: var(--font-color-dark);
+  }
+  [aria-expanded='true'] ~ ul li:last-child {
+    display: inline;
+    margin-right: 1.5rem;
+    padding: 0.1rem 0.5rem;
+  }
+  [aria-expanded='true'] ~ ul li:last-child a {
+    color: var(--white);
+    text-align: right;
+    margin-right: 0;
+  }
+  .hire-us .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .testimonial {
+    flex-wrap: wrap;
+    gap: 10rem;
+  }
+  .client-logo {
+    width: 12%;
+  }
+
+  .pricing-details-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .price-box {
+    margin-right: 0;
+  }
+  .pricing-benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pricing-benefits p {
+    text-align: center;
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
+  .form-title,
+  .needs,
+  .accept-terms,
+  .btn-wrapper {
+    grid-column: 1/2;
+  }
+  .footer-cols-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  .footer-col.col-1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    align-items: center;
+  }
+
+  .img-wrapper {
+    width: 14%;
+  }
+
+  .calendar {
+    bottom: 40%;
+  }
+
+  .paypal {
+    bottom: 35%;
+  }
+
+  .google-ads {
+    bottom: 25%;
+  }
+  .reasons {
+    grid-template-columns: 1fr;
+  }
+
+  .reasons > div {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-left: 2rem;
+  }
+
+  .reasons div p {
+    font-size: 1.8rem;
+  }
+  .benefit-cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,602 @@
+.header-bg {
+  background: linear-gradient(171deg, transparent 70%, white 70%),
+    linear-gradient(140deg, transparent 65%, #ced4da 65%),
+    linear-gradient(173deg, var(--light-gray) 80%, transparent 80%);
+  padding-bottom: 1px;
+}
+
+.topbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar-nav li a:link,
+.topbar-nav li a:visited {
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+.topbar-nav li a:hover,
+.topbar-nav li a:active {
+  font-weight: 700;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: inline-block;
+  max-width: 12rem;
+}
+
+.navbar-toggler {
+  position: absolute;
+  right: var(--size-20);
+  top: var(--size-10);
+  outline: none;
+  border: 1px solid black;
+  right: 5%;
+}
+
+.navbar-toggler span {
+  color: var(--gray);
+  font-size: var(--size-20);
+  cursor: pointer;
+  color: var(--gray);
+  pointer-events: none;
+}
+
+[aria-controls='topbarDropdown'],
+[aria-controls='navbarDropdown'] {
+  display: none;
+}
+
+.navbar-fixed {
+  /* navbar-fixed gets added/removed on the navbar through observer.js */
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--white);
+  top: 0;
+  padding: 1rem;
+  box-shadow: 0 0.5rem 0.5rem #dee2e6;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.navbar-nav li a:link,
+.navbar-nav li a:visited {
+  color: var(--gray);
+  font-size: 1.6rem;
+}
+
+.navbar-nav li:first-child a,
+.navbar-nav li a:hover,
+.navbar-nav li a:active {
+  color: var(--blue-link);
+}
+
+.navbar-nav li:last-child a {
+  color: var(--white);
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  align-items: center;
+  gap: 2rem;
+  margin: 5rem 0;
+}
+
+.left-side-header p {
+  font-size: 1.6rem;
+  color: var(--gray);
+}
+
+.left-side-header ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.right-side-header {
+  /* for all the logos */
+  position: relative;
+  height: 100%;
+}
+
+.img-wrapper {
+  /* each logo on the right side header is contained in this wrapper */
+  width: 13%;
+  background-color: var(--white);
+  border-radius: 50%;
+  border: 0.1rem solid transparent;
+  box-shadow: 0 1rem 1rem #dee2e6;
+  padding: 1rem;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes appear {
+  /* animation for logos to appear and rise on refresh/load */
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-25%);
+  }
+}
+
+.asana {
+  position: absolute;
+  right: 3%;
+  top: 10%;
+}
+
+.atlassian {
+  position: absolute;
+  left: 35%;
+  top: 15%;
+}
+
+.calendar {
+  position: absolute;
+  right: 3%;
+  bottom: 0;
+}
+
+.google-ads {
+  position: absolute;
+  left: 25%;
+  bottom: 10%;
+  width: 11.5%;
+}
+
+.google {
+  position: absolute;
+  left: 5%;
+  top: 0;
+  width: 11.5%;
+}
+
+.paypal {
+  position: absolute;
+  left: 5%;
+  bottom: 30%;
+}
+
+.weave {
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+}
+
+.benefits.container {
+  padding-top: 7rem;
+}
+.benefits p,
+.why-front p,
+.pricing p {
+  font-size: 1.4rem;
+  color: var(--gray);
+  text-align: center;
+}
+
+.benefit-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  margin-top: 7rem;
+  margin-bottom: 10rem;
+}
+
+.benefit-card,
+.price-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--white);
+  border: 1px solid transparent;
+  box-shadow: 0 1rem 1rem #dee2e6;
+  padding: 1rem;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.benefit-card:hover,
+.price-box:hover {
+  transform: scale(1.03);
+}
+
+.benefit-img-wrapper {
+  width: 7rem;
+}
+
+.card-content p,
+.pricing-benefits p,
+.price-box p {
+  font-size: 1.2rem;
+  color: var(--gray);
+  text-align: left;
+  margin: 0;
+  height: 100%;
+}
+
+.premium::after {
+  content: 'sketch';
+  background-color: rgb(11, 218, 100);
+  color: var(--white);
+  font-size: 1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 5rem;
+  margin: 1rem;
+}
+
+.for-people-bg {
+  background-color: var(--light-gray);
+  padding: 7rem 0 0;
+  margin-bottom: 8rem;
+}
+.for-people {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.for-people-text {
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 10rem;
+}
+
+.for-people-img {
+  box-shadow: -1rem -0.5rem 1rem #dee2e6;
+  width: 110%;
+  margin-left: -10%;
+}
+
+.why-front {
+  margin-bottom: 8rem;
+  padding-top: 4rem;
+}
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 5rem;
+  margin-bottom: 8rem;
+}
+
+.reasons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reasons div p {
+  color: var(--black);
+  font-weight: 700;
+}
+.circle {
+  background-color: var(--light-gray);
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  color: var(--blue-link);
+  text-align: center;
+  font-size: 5rem;
+  line-height: 1;
+  margin: 0 0 1rem;
+  position: relative;
+}
+
+.line::after {
+  /* This class has not been added to the last div, as no line is needed after that */
+  content: '';
+  position: absolute;
+  top: 45%;
+  right: -330%;
+  height: 4px;
+  background: var(--light-gray);
+  width: 250%;
+}
+
+.reasons-img-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8rem;
+}
+
+.testimonial-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dots-border {
+  width: 35%;
+  margin-right: -26%;
+  margin-bottom: -44%;
+}
+
+.testimonial-profile {
+  width: 80%;
+}
+.testimonial-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 3rem;
+  gap: 2rem;
+  width: 80%;
+}
+.hubspot-logo {
+  width: 20%;
+}
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.testimonial-content p {
+  color: #495057;
+  font-size: 2rem;
+}
+
+.trusted-by {
+  margin-bottom: 8rem;
+}
+
+.trusted-by p {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.clients {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.client-logo {
+  width: 8%;
+}
+
+.pricing {
+  margin-top: 8rem;
+  padding-top: 4rem;
+}
+
+.pricing-details-wrapper {
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  margin: 5rem 0 8rem;
+}
+.price-box {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  margin-right: 2rem;
+  align-items: flex-start;
+  padding: 4rem;
+  min-width: 30rem;
+}
+.price-box h2 {
+  display: inline-block;
+  margin: 0;
+}
+.price-box .monthly {
+  color: var(--black);
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.dollar-box {
+  width: 100%;
+}
+.dollar-divider {
+  /* this is the line under dollar rate */
+  height: 2px;
+  background: var(--font-color-light);
+  width: 90%;
+  margin: 2rem 0;
+}
+
+.credit-card {
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+.pricing-benefits {
+  margin-left: 2rem;
+}
+.pricing-benefits-icon {
+  width: 15%;
+}
+
+.hire-us {
+  background-color: var(--font-color-dark);
+  margin-bottom: 8rem;
+}
+
+.hire-us .container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.hire-us-left h2,
+.hire-us-left h3,
+.hire-us-left h4 {
+  text-align: left;
+  color: var(--white);
+}
+
+.hire-us-left p {
+  color: var(--font-color-light);
+}
+.hire-divider {
+  /* this is the line under Hire Us Text */
+  height: 1px;
+  background: var(--font-color-light);
+  width: 35%;
+  margin: 3rem 0.5rem;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.profile-pics {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.profile-pic-wrapper {
+  width: 8%;
+}
+
+.profile-pic-wrapper.main {
+  width: 12%;
+}
+
+.profile-pic-wrapper img {
+  border-radius: 50%;
+}
+
+.hire-us-form {
+  margin: 5rem 0;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 5rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-title,
+.needs,
+.accept-terms,
+.btn-wrapper {
+  grid-column: 1/3;
+}
+
+.accept-terms {
+  display: flex;
+  gap: 1rem;
+}
+
+.accept-terms .accept {
+  font-size: 1.1rem;
+}
+
+.privacy {
+  border-bottom: 1px dotted;
+  color: var(--gray);
+}
+.submit.btn {
+  border: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.footer.container {
+  margin-bottom: 5rem;
+}
+.footer-cols-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 1rem;
+  gap: 1.5rem;
+}
+.footer-col.col-1 {
+  margin-left: 0;
+}
+.footer-logo-wrapper {
+  width: 50%;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.contact h6 {
+  font-size: 1rem;
+  color: var(--font-color-light);
+}
+
+.footer-col ul li a {
+  color: var(--gray);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-col ul li:first-child {
+  color: var(--black);
+  font-weight: bold;
+}
+
+.careers::after {
+  content: "We're hiring";
+  font-size: 1rem;
+  background-color: var(--blue-link);
+  padding: 0rem 0.5rem;
+  border-radius: 5rem;
+  text-align: center;
+  color: var(--white);
+  margin-left: 0.5rem;
+}
