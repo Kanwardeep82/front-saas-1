@@ -102,6 +102,7 @@
   }
   .hire-us .container {
     grid-template-columns: 1fr;
+    padding-top: 5rem;
   }
 }
 
